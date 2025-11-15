@@ -1,14 +1,31 @@
-import TodosList from './components/TodosList'
+import { useState } from "react";
 
-import './App.css'
+import TodosList from "./components/TodosList";
+import MainHeader from "./components/MainHeader";
+import "./App.css";
 function App() {
+  const [modalIsVisible, setModalIsVisible] = useState(false);
+
+  function hideModalHandler() {
+    setModalIsVisible(false);
+  }
+
+  function showModalHandler() {
+    setModalIsVisible(true);
+  }
 
   return (
-    <main>
-     {/* <img src="/src/assets/Logo.png" alt="Zaplist Logo" className="logo" /> */}
-     <TodosList />
-    </main>
-  )
+    <>
+      <MainHeader onCreatePost={showModalHandler} />
+      <main>
+        <TodosList 
+          isPosting={modalIsVisible}
+          onStopPosting={hideModalHandler}
+
+        />
+      </main>
+    </>
+  );
 }
 
-export default App
+export default App;
