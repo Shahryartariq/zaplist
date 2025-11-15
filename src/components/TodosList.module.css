@@ -8,3 +8,23 @@
   grid-template-columns: repeat(3, 30%);
   justify-content: center;
 }
+
+
+.emptyTodo {
+  text-align: center;
+  color: var(--color-text);
+  margin-top: 3rem;
+  opacity: 0.9;
+}
+
+.emptyTodo h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.emptyTodo p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
