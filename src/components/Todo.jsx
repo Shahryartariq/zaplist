@@ -1,11 +1,14 @@
-import classes from './Todo.module.css';
+import { Link } from "react-router-dom";
+import classes from "./Todo.module.css";
 
-
-function Todo({title, body}) {
+function Todo({ id, title, body }) {
+  console.log("Todo component rendered: " + id);
   return (
     <li className={classes.todo}>
-      <p className={classes.todo_title}>{title}</p>
-      <p className={classes.todo_body}>{body}</p>
+      <Link to={`/todo/${id}`} className={classes.todo_link}>
+        <p className={classes.todo_title}>{title}</p>
+        <p className={classes.todo_body}>{body}</p>
+      </Link>
     </li>
   );
 }

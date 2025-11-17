@@ -1,0 +1,92 @@
+.details {
+  width: 100%;
+  max-width: 32rem;
+  padding: 2rem;
+  background: rgba(26, 26, 46, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  animation: slideIn 0.35s ease-out forwards;
+  margin-inline: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #E94560;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.text {
+  white-space: pre-wrap;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  margin: 1rem 0 2rem;
+  color: #E0E0E0;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button,
+.buttonSecondary,
+.buttonDanger {
+  cursor: pointer;
+  font: inherit;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(4px);
+  border: 1px solid #533483;
+}
+
+.button {
+  background: rgba(15, 52, 96, 0.3);
+  color: #E0E0E0;
+}
+
+.button:hover {
+  background: rgba(83, 52, 131, 0.55);
+}
+
+.buttonSecondary {
+  background: rgba(83, 52, 131, 0.4);
+  color: #E0E0E0;
+}
+
+.buttonSecondary:hover {
+  background: rgba(15, 52, 96, 0.6);
+}
+
+.buttonDanger {
+  background: rgba(233, 69, 96, 0.7);
+  border: none;
+  color: #fff;
+}
+
+.buttonDanger:hover {
+  background: rgba(233, 69, 96, 1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
